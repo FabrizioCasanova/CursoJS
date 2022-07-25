@@ -11,5 +11,3 @@ do {
 
 } while (isNaN(numero) || pregunta =='si')
 
-console.log(numero)
-console.log(pregunta)
