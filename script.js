@@ -1,4 +1,4 @@
-class alumnos {
+class Alumno {
     constructor(nombre, apellido, nota) {
         this.nombre = nombre
         this.apellido = apellido
@@ -6,18 +6,18 @@ class alumnos {
     }
 }
 
-const alumno1 = new alumnos("Juan", "Valdez", 7)
-const alumno2 = new alumnos("Pedro", "Castro", 8)
-const alumno3 = new alumnos("Valeria", "Rojas", 8.50)
-const alumno4 = new alumnos("Flor", "Quinteros", 7.50)
-const alumno5 = new alumnos("Nestor", "Leprich", 9.50)
+const alumno1 = new Alumno("Juan", "Valdez", 7)
+const alumno2 = new Alumno("Pedro", "Castro", 8)
+const alumno3 = new Alumno("Valeria", "Rojas", 8.50)
+const alumno4 = new Alumno("Flor", "Quinteros", 7.50)
+const alumno5 = new Alumno("Nestor", "Leprich", 9.50)
 
-const alumnosAprob = [alumno1, alumno2, alumno3, alumno4, alumno5]
+const alumnos = [alumno1, alumno2, alumno3, alumno4, alumno5]
 
 function alumnosAprobados() {
     let listaAlumnos = ""
     for (let i = 0; i < 5; i++) {
-        listaAlumnos = listaAlumnos + "\n\n" + alumnosAprob[i].nombre + "  " + alumnosAprob[i].apellido + " Nota: " + alumnosAprob[i].nota;
+        listaAlumnos = listaAlumnos + "\n\n" + alumnos[i].nombre + "  " + alumnos[i].apellido + " Nota: " + alumnos[i].nota;
     }
     alert(`Los/las alumnos/as aprobados/as son: ${listaAlumnos}`)
 }
@@ -27,7 +27,7 @@ function sacarPromedio() {
     const sumaDeNotas = (nota1, nota2, nota3) => nota1 + nota2 + nota3
 
     let primerNota, segundaNota, tercerNota
-    let pregunta 
+    let pregunta
 
     do {
 
@@ -58,13 +58,13 @@ function sacarPromedio() {
 
         } while ((isNaN(tercerNota)));
 
-        alert (`El promedio de este/a alumno/a es: ${sumaDeNotas(primerNota,segundaNota,tercerNota*3/3)}`)
+        alert(`El promedio de este/a alumno/a es: ${sumaDeNotas(primerNota,segundaNota,tercerNota*3/3)}`)
 
         do {
-        pregunta = prompt('¿Desea calcular otro promedio? ("Si"|"No")').toLowerCase()
+            pregunta = prompt('¿Desea calcular otro promedio? ("Si"|"No")').toLowerCase()
         } while (pregunta != 'si' && pregunta != 'no');
 
-    } while ( pregunta == 'si');
+    } while (pregunta == 'si');
 
 }
 
